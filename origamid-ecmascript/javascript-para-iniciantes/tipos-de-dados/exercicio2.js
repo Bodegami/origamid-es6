@@ -1,6 +1,6 @@
 //Declare uma variavel contendo uma string
-let word = 'Apenas um texto qualquer'
-console.log(word)
+let nome = 'Renato'
+console.log(nome)
 
 //Declare uma variavel contendo um número dentro de uma string
 let frase = 'Renato Ferreira, 33 anos'
@@ -11,13 +11,15 @@ let idade = 33;
 console.log(idade)
 
 //Declare duas variaveis, uma com o seu nome e outra com o seu sobrenome e some as mesmas
-let nome = 'Renato ';
 let sobrenome = 'Ferreira'
-console.log(nome + sobrenome);
+let nomeCompleto = `${nome} ${sobrenome}`;
+console.log(nomeCompleto)
+
 
 //Coloque a suguinte frase e uma variavel: it's time
-let time = "it's time";
+let time = 'It\'s time'
 console.log(time)
 
 //Verifique o tipo da variavel que contém o seu nome
-console.log(typeof nome)
+let verificarTipoNome = typeof nome;
+console.log(verificarTipoNome)
