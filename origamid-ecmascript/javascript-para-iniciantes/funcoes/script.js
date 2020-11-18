@@ -43,8 +43,56 @@ addEventListener('click', function() {
 //Segundo é uma função anônima
 
 Funções anônimas são aquelas em que o nome da não é definido, escritas como function() {} ou () => {}
+--------------------------------------
 
+Pode ou não retornar um valor
 
+Quando não definimos o return, ela irá retornar undefined. O código interno da função é executado normalmente, independete de existir valor de return ou não.
+----------------------------------------------
+
+Ecopo
+
+Variáveis e funções definidas dentro de um bloco {}, não são visíveis fora dele.
+
+function precisoVisitar(paisesVisitados) {
+  var totalPaises = 193;
+  return `Ainda faltam ${totalPaises - paisesVisitados} paises.`
+}
+console.log(totalPaises); // erro, totalPaises nõo definido
+---------------------------------------------------------------------------
+
+Escopo Léxico
+
+Funções conseguem acessar variavéis que foram criadas no contexto pai
+
+var profissao = 'Designer';
+
+function dados() {
+  var nome = 'Renato';
+  var idade = '33';
+
+  function outrosDados() {
+    var endereço = 'Rio de Janeiro';
+    var idade = 29;
+    return `${nome}, ${idade}, ${endereco}, ${profissao}`
+  }
+  return outrosDados();
+}
+dados(); // Retorna 'Renato, 29, Rio de Janeiro, Designer'
+outrosDados(); // retorna erro 
+---------------------------------------------------------------------
+
+Hoisting
+
+Antes de execitar uma função, o JS 'move' todas as funções declaradas para a memoria
+
+imc(80, 1.80); //imc aparece no console
+
+function imc(peso, altura) {
+  cosnt imc = peso / (altura ** 2);
+  console.log(imc);
+}
+-------------------------------------------------------------------------
 */
 
 function areaQuadrado(lado){
@@ -87,3 +135,27 @@ function mostraConsole() {
 }
 
 addEventListener('click', mostraConsole)
+
+function imc2(peso, altura){
+  var imc = peso / (altura * altura);
+  console.log(imc);
+}
+imc2(20, 1.8);
+
+function terceiraIdade(idade) {
+  if (typeof idade !== 'number') {
+    return 'Por favor preencha um número'
+  } else if(idade >= 60) {
+    return true;
+  } else {
+    return false;
+  }
+}
+  
+console.log(terceiraIdade(60))
+
+function faltaVisitar(paisesVisitados) {
+  var totalPaises = 193;
+  return `Faltam visitar ${totalPaises - paisesVisitados} paises`;
+}
+
