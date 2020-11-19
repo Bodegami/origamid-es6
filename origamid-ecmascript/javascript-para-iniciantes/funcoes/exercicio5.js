@@ -1,23 +1,23 @@
 //Crie uma função para verificar se um valor é truthy
 
 function verificaTipo(tipo){
-  if (tipo) {
-    return console.log('O valor é verdadeiro');
-  } else {
-    return console.log('O valor é falso')
-  }
+  return console.log(!!tipo);
+  // if (tipo) {
+  //   return console.log('O valor é verdadeiro');
+  // } else {
+  //   return console.log('O valor é falso')
+  // }
 }
 verificaTipo(1)
 
-//crie uma função matemática que retorne o perímetro de um quadrado
+//Crie uma função matemática que retorne o perímetro de um quadrado
 //lembrando: perímmetro é a soma dos quatro lados do quadrado
 function somaQuadrado(lado) {
-  lado = lado * 4;
-  return console.log(`O perímetro do quadrado é ${lado}`)
+  return console.log(`O perímetro do quadrado é ${lado * 4}`)
 }
 somaQuadrado(4)
 
-//Crie uma função qie retorne o seu nome completo
+//Crie uma função que retorne o seu nome completo
 //ela deve possuir os paramêtros: nome e sobrenome
 function nomeCompleto(nome, sobrenome) {
   var nomeCompleto = `${nome} ${sobrenome} `;
@@ -45,7 +45,7 @@ console.log(verificaDado('Olá'))
 //addEventListener é função nativa do JavaScript
 //o primeiro parâmetro é o evento que ocorre e o segundo é o callback
 //utilize essa função para mostrar no console o seu nome completo
-//quand o evento 'scroll' ocorrer.
+//quand o evento 'mouse wheel' ocorrer.
 addEventListener('mousewheel', ()=> {
   console.log('Renato Ferreira')
 })
@@ -57,8 +57,8 @@ function precisoVisitar(paisesVisitados) {
   
   return `Ainda falta ${totalPaises - paisesVisitados} países para visitar`
 }
-console.log(precisoVisitar(10))
+console.log(precisoVisitar(20))
 function jaVisitei(paisesVisitados) {
   return `Já visitei ${paisesVisitados} do total de ${totalPaises} países.`
 }
-console.log(jaVisitei(10))
+console.log(jaVisitei(20))
