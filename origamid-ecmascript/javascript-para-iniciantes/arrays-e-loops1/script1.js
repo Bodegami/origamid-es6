@@ -36,6 +36,19 @@ videogames.forEach(function(item) {
 Podemos passar os seguintes parâmetros item, index e array
 -----------------------------------------------------------------
 
+Não se confunda com a sintaxe
+
+var numero = 0;
+var maximo = 50;
+for (; numero < maximo;) {
+  console.log(numero);
+  numero++;
+}
+
+Não aconselho escrever dessa forma acima, mas funciona normalmente
+-------------------------------------------------------------------
+
+
 */
 
 var videoGames = ['Switch', 'PS4', 'Xbox', '3DS'];
@@ -49,5 +62,6 @@ for (var item = 0; item < videoGames.length; item++) {
 
 var frutas = ['Banana', 'Pera', 'Maça', 'Abacaxi', 'Uva', 'Goiaba']
 frutas.forEach(function(item, index, array) {
+  frutas.pop(); //a cada loop ele remove o ultimo elemento do array
   console.log(item, index, array)
 })
